@@ -13,6 +13,7 @@ driver = webdriver.Chrome(service=service)
 driver.maximize_window()
 
 driver.get('www.target.com')
+sleep(5)
 driver.find_element(By.XPATH,"//span[text()='Sign in']").click()
 driver.find_element(By.XPATH,"//button[@data-test='accountNav-signIn']").click()
 sleep(10)
