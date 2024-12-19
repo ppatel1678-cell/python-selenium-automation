@@ -1,16 +1,13 @@
-Feature: Your cart is empty message shows
+Feature: Target search page
 
-  Scenario: Cart is empty message shows
+  Scenario Outline: User can search for a product
     Given Open Target page
-    When Click on cart button
-    Then Your cart is empty message displays
+    When search for a <product>
+    Then verify search for results are shown for <product>
+    Examples:
+    | product |
+    | coffee  |
+    | mug     |
+    | tea     |
 
-Feature: Logged out user can navigate to sign in page
-
-
-  Scenario: Clicking on sign on page leads to sign in page
-    Given Open Target page
-    When Click on sign on button
-    When Click sign in from side navigation
-    Then Sign in message displays
 
